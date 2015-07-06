@@ -101,7 +101,7 @@ public abstract class AppIntro2 extends FragmentActivity {
 
         for (int i = 0; i < slidesNumber; i++) {
             ImageView dot = new ImageView(this);
-            dot.setImageDrawable(getResources().getDrawable(R.drawable.indicator_dot_grey));
+            dot.setImageDrawable(getResources().getDrawable(R.drawable.indicator_dot_dark));
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT,
@@ -118,7 +118,7 @@ public abstract class AppIntro2 extends FragmentActivity {
     public void selectDot(int index) {
         Resources res = getResources();
         for (int i = 0; i < fragments.size(); i++) {
-            int drawableId = (i == index) ? (R.drawable.indicator_dot_white) : (R.drawable.indicator_dot_grey);
+            int drawableId = (i == index) ? (R.drawable.indicator_dot_bright) : (R.drawable.indicator_dot_dark);
             Drawable drawable = res.getDrawable(drawableId);
             dots.get(i).setImageDrawable(drawable);
         }
